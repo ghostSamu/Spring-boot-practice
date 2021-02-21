@@ -1,0 +1,9 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+#    加载不同环境的配置文件  公共（application） 开发（application-dev） 测试（application-test） 生产（application-prod）
+#    @Value,@ConfigurationProperties 一般默认加载公共配置文件  如果有指明profiles  则加载指定的文件
+spring:
+  profiles:
+    active: dev
