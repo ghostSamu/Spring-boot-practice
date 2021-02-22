@@ -6,6 +6,7 @@
     <modules>
         <module>demo-helloworld</module>
         <module>demo-properties</module>
+        <module>demo-actuator</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+
+# 若要访问8090端口，需要配置用户名和密码
+spring:
+  security:
+    user:
+      name: fireandlemon
+      password: 123456
+# 为了安全 启用独立的端口来监视端点信息
+management:
+  server:
+    port: 8090
+    servlet:
+#     设置url路径
+      context-path: /sys
+  endpoint:
+# 端点健康检查 DB redise等等
+    health:
+#     默认值"never"，设置为"always"可以显示硬盘使用情况和线程情况
+      show-details: always
+  endpoints:
+    web:
+#选择监控点
+      exposure:
+        #全部
+#        include: '*'
+        #部分
+        exclude: beans,trace
+# 设置监视点的路径  默认http://localhost:8090/sys/actuator
+#  http://localhost:8090/sys/manage
+#      base-path: /manage
